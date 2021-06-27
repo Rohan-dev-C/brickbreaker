@@ -8,3 +8,13 @@
 \\GMRDC1\Folder Redirection\Rohan.Sampath\Documents\Visual Studio 2019\Projects\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.csproj.CoreCompileInputs.cache
 \\GMRDC1\Folder Redirection\Rohan.Sampath\Documents\Visual Studio 2019\Projects\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.exe
 \\GMRDC1\Folder Redirection\Rohan.Sampath\Documents\Visual Studio 2019\Projects\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.pdb
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\bin\Debug\BrickBreaker.exe.config
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\bin\Debug\BrickBreaker.exe
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\bin\Debug\BrickBreaker.pdb
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.csprojAssemblyReference.cache
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.Form1.resources
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.Properties.Resources.resources
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.csproj.GenerateResource.cache
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.csproj.CoreCompileInputs.cache
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.exe
+C:\Users\rohan.sampath\source\repos\Rohan-dev-C\brickbreaker\BrickBreaker\BrickBreaker\obj\Debug\BrickBreaker.pdb

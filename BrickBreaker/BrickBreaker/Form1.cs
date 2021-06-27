@@ -16,16 +16,16 @@ namespace BrickBreaker
         Graphics gfx;
         Bitmap canvas;
         Paddle paddle = new Paddle(10, 700, 120, 10, Color.Black, 0);
-        Ball ball = new Ball(10, 690, 10, 10, Color.LavenderBlush, 4, 4);
+        Ball ball = new Ball(10, 690, 10, 10, Color.LavenderBlush, 4, 8);
         bool wasRightPressed = false;
         bool wasLeftPressed = false;
 
 
         int score = 0;
 
+        int dieCount = 0;
 
-
-
+        TimeSpan elapsed = TimeSpan.Zero;
 
         public Form1()
         {
@@ -34,8 +34,8 @@ namespace BrickBreaker
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
+            YOUWIN.Visible = false;
+            lostlabel.Visible = false; 
             int y = 100;
 
             for (int i = 0; i < 5; i++)
@@ -61,7 +61,16 @@ namespace BrickBreaker
 
             if (ball.HitBox.IntersectsWith(paddle.HitBox))
             {
-                ball.ySpeed = -Math.Abs(ball.ySpeed);
+                if(ball.x > (paddle.x + paddle.x + paddle.width)/2)
+                {
+                    ball.xSpeed = Math.Abs(ball.xSpeed);
+                    ball.ySpeed = -Math.Abs(ball.ySpeed);
+                }
+                else if(ball.x < (paddle.x + paddle.x + paddle.width) / 2)
+                {
+                    ball.xSpeed = -Math.Abs(ball.xSpeed);
+                    ball.ySpeed = -Math.Abs(ball.ySpeed);
+                }
             }
 
             if (ball.y + ball.height > ClientSize.Height)
@@ -70,6 +79,7 @@ namespace BrickBreaker
                 ball.x = (paddle.x + (paddle.x + paddle.width)) / 2;
                 ball.y = paddle.y;
                 ball.ySpeed = -Math.Abs(ball.ySpeed);
+                dieCount++; 
             }
 
             for (int i = 0; i < bricks.Count; i++)
@@ -108,8 +118,27 @@ namespace BrickBreaker
 
                 }
             }
-            
-            scoreLabel.Text = $"Score: {score}";
+
+            if (bricks.Count == 0)
+            {
+                pictureBox1.Visible = false;
+                YOUWIN.Visible = true; 
+            }
+            if(dieCount > 5)
+            {
+                pictureBox1.Visible = false;
+                lostlabel.Visible = true;
+
+                elapsed +=TimeSpan.FromMilliseconds(timer1.Interval);
+                if(elapsed > TimeSpan.FromMilliseconds(500))
+                {
+                    this.Close();
+                }
+            }
+            if (dieCount < 5)
+            {
+                scoreLabel.Text = $"Score: {score}";
+            }
             Point point1 = new Point(0, 0);
             paddle.Draw(gfx, ClientSize);
             ball.Draw(gfx, ClientSize);
@@ -143,6 +172,7 @@ namespace BrickBreaker
             }
 
         }
+
 
 
 

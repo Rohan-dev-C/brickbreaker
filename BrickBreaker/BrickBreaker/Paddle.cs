@@ -24,11 +24,11 @@ namespace BrickBreaker
        {
             if (bool1 && this.x + this.width < ClientSize.Width)
             {
-                this.x += 4;
+                this.x += 7;
             }
             if (bool2 && this.x > 0)
             {
-                this.x -= 4;
+                this.x -= 7;
             }
 
         }

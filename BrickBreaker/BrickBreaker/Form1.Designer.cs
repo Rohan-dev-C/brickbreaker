@@ -33,6 +33,8 @@ namespace BrickBreaker
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.scoreLabel = new System.Windows.Forms.Label();
+            this.YOUWIN = new System.Windows.Forms.Label();
+            this.lostlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +65,33 @@ namespace BrickBreaker
             this.scoreLabel.TabIndex = 1;
             this.scoreLabel.Text = "Score";
             // 
+            // YOUWIN
+            // 
+            this.YOUWIN.AutoSize = true;
+            this.YOUWIN.Font = new System.Drawing.Font("Comic Sans MS", 160F);
+            this.YOUWIN.Location = new System.Drawing.Point(44, 210);
+            this.YOUWIN.Name = "YOUWIN";
+            this.YOUWIN.Size = new System.Drawing.Size(1164, 298);
+            this.YOUWIN.TabIndex = 2;
+            this.YOUWIN.Text = "YOU WIN";
+            // 
+            // lostlabel
+            // 
+            this.lostlabel.AutoSize = true;
+            this.lostlabel.Font = new System.Drawing.Font("Comic Sans MS", 160F);
+            this.lostlabel.Location = new System.Drawing.Point(21, 136);
+            this.lostlabel.Name = "lostlabel";
+            this.lostlabel.Size = new System.Drawing.Size(1225, 298);
+            this.lostlabel.TabIndex = 3;
+            this.lostlabel.Text = "YOU LOSE";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1246, 732);
+            this.Controls.Add(this.lostlabel);
+            this.Controls.Add(this.YOUWIN);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -86,6 +110,8 @@ namespace BrickBreaker
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label YOUWIN;
+        private System.Windows.Forms.Label lostlabel;
     }
 }
 
